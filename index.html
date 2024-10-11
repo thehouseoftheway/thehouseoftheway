@@ -1,122 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
 
 <head>
-	<title>The House of the Way Inn & Convention Center</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/x-icon" href="logo.png">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poetsen+One&family=Uncial+Antiqua&family=Varela+Round&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The House of the Way Inn & Convention Center</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/dbreezelogo.jpg.png">
+    <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
 </head>
 
-<body> 
+<body>
 
-	<!------------ This part logo top ------------>
-	<a href="index.html">
-		<img src="logo.png" class="logo-top">
-	</a>
-	<!------------ end part logo top ------------>
+    <header>
+        <nav>
+            <ul class="nav-bar">
+                <li class="logo"><a href="#"><img src="logo.png" alt="logo"></a></li>
+                <input type="checkbox" id="check">
+                <span class="menu">
+                    <li><a href="#" >ABOUT</a></li>
+                    <li><a href="#">GUESTROOMS</a></li>
+                    <li><a href="#">GALLERY</a></li>
+                    <li><a href="#">OFFERS</a></li>
+                    <li><a href="#">RESEVATIONS</a></li>
+                    <label for="check" class="close-menu"><i class="fa-solid fa-xmark"></i></label>
 
-	<!------------ this part is navigation bar ------------>
+                    <div class="xContainer"></div>
+                    <div class="socialIcons">
+                        <a href=""><i class="fa-brands fa-facebook"></i>
+                            <a href=""><i class="fa-brands fa-twitter"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </span>
 
-	<div class="header_section">
-		<div class="container-fluid">
-		   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			  <span class="navbar-toggler-icon"></span>
-			  </button>
-			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-				 <ul class="navbar-nav ml-auto">
-					<li class="nav-item active">
-				
-					</li>
-					<li class="nav-item">
-					   <a class="nav-link" href="about.html">ABOUT</a>
-					</li>
-					<li class="nav-item">
-					   <a class="nav-link" href="guestroom.html">GUESTROOM</a>
-					</li>
-					<li class="nav-item">
-					   <a class="nav-link" href="offers.html">OFFERS</a>
-					</li>
-					<li class="nav-item">
-					   <a class="nav-link" href="gallery.html">GALLERY</a>
-					</li>
-					<li class="nav-item">
-					   <a class="nav-link" href="booking.html">RESERVATIONS</a>
-					</li>
-				 </ul>
-				 <div class="search-container">
-					<form action="/action_page.php">
-					  <input type="text" placeholder="Search.." name="search">
-					  <button type="submit"><i class="fa fa-search"></i></button>
-					</form>
-				  </div>
-					</div>
-				 </form>
-			  </div>
-		   </nav>
-		</div>
-<!------------ end part search ------------>
-		<div class="texts">
+                <label for="check" class="open-menu"><i class="fa-solid fa-bars"></i></label>
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="texts">
 			<h1>The House of the Way Inn & Convention Center.</h1>
-			<p>"We'll pick you up, we'll set you down, we'll take you to a comfort home.				"</p>
+			<p>"We'll pick you up, we'll set you down, we'll take you to a comfort home."</p>
 			<button class="btn-info"><a href="booking.html">BOOK NOW!</a></button>
-		</div>
-		
-		<img id="myImg" src="1.jpg" alt="ROOM 304 - 2 double bed" style="width:100%;max-width:250px">
-		<img id="myImg" src="2.jpg" alt="Guest Suit" style="width:100%;max-width:250px">
-		<img id="myImg" src="3.jpg" alt="Parking area with remote control gate, available for one guest's car" style="width:100%;max-width:250px">
-		<img id="myImg" src="4.jpeg" alt="Kitchen" style="width:100%;max-width:250px">
-		<img id="myImg" src="5.jpg.webp" alt="Room View" style="width:100%;max-width:250px">
-
-		<!-- The Modal -->
-		<div id="myModal" class="modal">
-		  <span class="close">&times;</span>
-		  <img class="modal-content" id="img01">
-		  <div id="caption"></div>
 		</div> 
 
-		<div id="myModal" class="modal">
-			<span class="close">&times;</span>
-			<img class="modal-content" id="img02">
-			<div id="caption"></div>
-		  </div>
+    <center>
+        <img id="myImg" src="1.jpg" alt="ROOM 304 - 2 double bed" style="width:100%;max-width:310px">
+		<img id="myImg" src="2.jpg" alt="Guest Suit" style="width:100%;max-width:310px">
+		<img id="myImg" src="3.jpg" alt="Parking area with remote control gate, available for one guest's car" style="width:100%;max-width:310px">
+		<img id="myImg" src="4.jpeg" alt="Kitchen" style="width:100%;max-width:310px">
+    </center>
 
-		  <div id="myModal" class="modal">
-			<span class="close">&times;</span>
-			<img class="modal-content" id="img03">
-			<div id="caption"></div>
-		  </div>
 
-		  <div id="myModal" class="modal">
-			<span class="close">&times;</span>
-			<img class="modal-content" id="img04">
-			<div id="caption"></div>
-		  </div>
+    </section>
+    <section class="footer">
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-facebook-messenger"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <ul class="list">
+            <li>
+                <a href="#" class="active">Privacy Policy</a>
+            </li>
+            <li>
+                <a href="#" class="active">Terms of Service</a>
+            </li>
+            <li>
+                <a href="#" class="active">Contact Us</a>
+            </li>
 
-		  <div id="myModal" class="modal">
-			<span class="close">&times;</span>
-			<img class="modal-content" id="img05">
-			<div id="caption"></div>
-		  </div> 
-	<!------------ this part is footer ------------>
-		<footer>
-			<div class="container">
-				<p>&copy; Copyright © 2024 The House of the Way Inn & Convention Center.</p>
-				<ul class="footer-links">
-					<li><a href="#">Privacy Policy</a></li>
-					<li><a href="#">Terms of Service</a></li>
-					<li><a href="#">Contact Us</a></li>
-				</ul>
-			</div>
-		</footer>
+        </ul>
 
-	<script src="script.js"></script>
+
+        <p class="copyright">
+            ©2024 The House of the Way Inn & Convention Center. All right Reserved.
+        </p>
+
+
+    </section>    
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>
