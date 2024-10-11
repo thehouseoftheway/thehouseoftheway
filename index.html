@@ -7,7 +7,7 @@
     <title>The House of the Way Inn & Convention Center</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="icon" type="image/x-icon" href="images/dbreezelogo.jpg.png">
     <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
@@ -53,36 +53,34 @@
 		</div> 
 
     <center>
-        <img id="myImg" src="1.jpg" alt="ROOM 304 - 2 double bed" style="width:100%;max-width:310px">
-		<img id="myImg" src="2.jpg" alt="Guest Suit" style="width:100%;max-width:310px">
-		<img id="myImg" src="3.jpg" alt="Parking area with remote control gate, available for one guest's car" style="width:100%;max-width:310px">
-		<img id="myImg" src="4.jpeg" alt="Kitchen" style="width:100%;max-width:310px">
-    </center>
+        <div class="slideshow-container">
 
-    <!-- The Modal -->
-		<div id="myModal" class="modal">
-            <span class="close">&times;</span>
-            <img class="modal-content" id="img01">
-            <div id="caption"></div>
-          </div> 
-  
-          <div id="myModal" class="modal">
-              <span class="close">&times;</span>
-              <img class="modal-content" id="img02">
-              <div id="caption"></div>
+            <div class="mySlides fade">
+              <img src="1.jpg" style="width:100%">
             </div>
-  
-            <div id="myModal" class="modal">
-              <span class="close">&times;</span>
-              <img class="modal-content" id="img03">
-              <div id="caption"></div>
+            <div class="mySlides fade">
+              <img src="2.jpg" style="width:100%">
             </div>
-  
-            <div id="myModal" class="modal">
-              <span class="close">&times;</span>
-              <img class="modal-content" id="img04">
-              <div id="caption"></div>
+            <div class="mySlides fade">
+              <img src="3.jpg" style="width:100%">
             </div>
+            <div class="mySlides fade">
+                <img src="4.jpeg" style="width:100%">  
+              </div>
+              <div class="mySlides fade">
+                <img src="5.jpg.webp" style="width:100%">  
+              </div>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+            </div>
+    </center>
   
 
     </section>
@@ -113,6 +111,29 @@
 
     </section>    
 
+    <script>
+        let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3500); // Change image every 3.5 seconds
+} 
+
+
+    </script>
     <script src="script.js"></script>
 
 </body>
