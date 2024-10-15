@@ -24,7 +24,12 @@ body {
     display: none;
 }
  
-
+header {
+    display: flex; /* Aligns items in a row */
+    justify-content: space-between; /* Space between logo and navbar */
+    align-items: center; /* Vertically centers the items */
+    padding: 10px; /* Optional padding */
+} 
 
 .nav-bar {
     width: 100%;
@@ -267,36 +272,15 @@ body {
 
 .footer {
     padding: 5px 0;
-    background-color: #d2fdff;
+    background-color: #00BF63;
 }
 
-.footer .social {
-    text-align: center;
-    padding-bottom: 25px;
-    color: #00BF63;
+footer .container { 
+ width: 100%;
+ margin: 0 auto;
+ padding: auto;
 
 }
-
-.footer .social a {
-    font-size: 24px;
-    color: inherit;
-    color: #00BF63;
-    width: 40px;
-    height: 40px;
-    line-height: 38px;
-    display: inline-block;
-    text-align: center;
-    border-radius: 50%;
-    margin: 0 8px;
-    opacity: 0.75;
-
-}
-
-
-.footer .social a:hover {
-    opacity: 0.9;
-}
-
 
 
 .footer ul {
@@ -348,6 +332,7 @@ img {vertical-align: middle;}
   margin: 0 2px;
   background-color: #00BF63;
   border-radius: 50%;
+  visibility: hidden;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
