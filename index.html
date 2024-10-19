@@ -7,7 +7,7 @@
     <title>The House of the Way Inn & Convention Center</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="icon" type="image/x-icon" href="Photos/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
@@ -19,26 +19,19 @@
 
 <body>
   <header>
-  <div class="logo">
-    <img src="logo.png" alt="Logo">
-</div>
+    <li class="logo"><a href="#"><img src="Photos/logo.png" alt="logo"></a></li>
+
         <nav>
             <ul class="nav-bar">
                 <input type="checkbox" id="check">
                 <span class="menu">
-                    <li><a href="#" >ABOUT</a></li>
-                    <li><a href="#">GUESTROOMS</a></li>
-                    <li><a href="#">GALLERY</a></li>
-                    <li><a href="#">OFFERS</a></li>
-                    <li><a href="#">RESEVATIONS</a></li>
+                    <li><a href="about.html" >ABOUT</a></li>
+                    <li><a href="guestroom.html">GUESTROOMS</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="offers.html">OFFERS</a></li>
+                    <li><a href="bookings.html">RESERVATIONS</a></li>
+                    <li><a href="#" onclick="toggleLogin()">Log In</a></li>
                     <label for="check" class="close-menu"><i class="fa-solid fa-xmark"></i></label>
-
-                    <div class="xContainer"></div>
-                    <div class="socialIcons">
-                        <a href=""><i class="fa-brands fa-facebook"></i>
-                            <a href=""><i class="fa-brands fa-twitter"></i></a>
-                            <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    </div>
                 </span>
 
                 <label for="check" class="open-menu"><i class="fa-solid fa-bars"></i></label>
@@ -47,29 +40,43 @@
         </nav>
     </header>
 
+    <main>
+      <div id="loginForm" class="hidden">
+          <form action="your-login-endpoint" method="POST"> <!-- Change the action URL as needed -->
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" required>
+
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required>
+
+              <button type="submit" class="login-button">Log In</button>
+          </form>
+      </div>
+  </main> 
+
     <div class="texts">
 			<h1>The House of the Way Inn & Convention Center.</h1>
 			<p>"We'll pick you up, we'll set you down, we'll take you to a comfort home."</p>
-			<button class="btn-info"><a href="booking.html">BOOK NOW!</a></button>
+			<button class="btn-info"><a href="bookings.html">BOOK NOW!</a></button>
 		</div> 
 
     <center>
         <div class="slideshow-container">
 
             <div class="mySlides fade">
-              <img src="1.jpg" style="width:100%">
+              <img src="Photos/1.jpg" style="width:100%">
             </div>
             <div class="mySlides fade">
-              <img src="2.jpg" style="width:100%">
+              <img src="Photos/2.jpg" style="width:100%">
             </div>
             <div class="mySlides fade">
-              <img src="3.jpg" style="width:100%">
+              <img src="Photos/3.jpg" style="width:100%">
             </div>
             <div class="mySlides fade">
-                <img src="4.jpeg" style="width:100%">  
+                <img src="Photos/4.jpeg" style="width:100%">  
               </div>
               <div class="mySlides fade">
-                <img src="5.jpg.webp" style="width:100%">  
+                <img src="Photos/5.jpg.webp" style="width:100%">  
               </div>
             
             </div>
@@ -85,8 +92,12 @@
     </center>
   
 
-    </section>
-    <section class="footer">
+
+
+    
+	<!------------ This Part is Footer  ------------>
+<center>  
+    <div class="footer">
         <ul class="container">
             <li>
                 <a href="#" class="active">Privacy Policy</a>
@@ -103,33 +114,10 @@
 
         </ul>
 
+   </center>  
 
+<!------------ end Part of Footer  ------------>
 
-    </section>    
-
-    <script>
-        let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 3500); // Change image every 3.5 seconds
-} 
-
-
-    </script>
     <script src="script.js"></script>
 
 </body>
