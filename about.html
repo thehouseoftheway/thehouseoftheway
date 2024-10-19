@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The House of the Way Inn & Convention Center</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Photos/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <li class="logo"><a href="index.html"><img src="Photos/logo.png" alt="logo"></a></li>
+
+        <nav>
+            <ul class="nav-bar">
+                <input type="checkbox" id="check">
+                <span class="menu">
+                    <li><a href="about.html" >ABOUT</a></li>
+                    <li><a href="guestroom.html">GUESTROOMS</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="offers.html">OFFERS</a></li>
+                    <li><a href="bookings.html">RESERVATIONS</a></li>
+                    <li><a href="#" onclick="toggleLogin()">Log In</a></li>
+                    <label for="check" class="close-menu"><i class="fa-solid fa-xmark"></i></label>
+
+                    <div class="xContainer"></div>
+                    <div class="socialIcons">
+                        <a href=""><i class="fa-brands fa-facebook"></i>
+                            <a href=""><i class="fa-brands fa-twitter"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </span>
+
+                <label for="check" class="open-menu"><i class="fa-solid fa-bars"></i></label>
+
+            </ul>
+        </nav>
+    </header> 
+
+    <main>
+        <div id="loginForm" class="hidden">
+            <h1>Login</h1>
+            <form action="your-login-endpoint" method="POST"> <!-- Change the action URL as needed -->
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+  
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+  
+                <button type="submit" class="login-button">Log In</button>
+            </form>
+        </div>
+    </main>  
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
