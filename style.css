@@ -2,7 +2,6 @@
 
 * {
     padding: 0;
-    margin: 0;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
@@ -45,11 +44,39 @@ header {
 
 }
 
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none; /* Hide dropdown by default */
+    position: absolute; /* Position below the parent */
+    background-color: #d2fdff; /* Dropdown background color */
+    min-width: 160px; /* Minimum width of dropdown */
+    z-index: 1; /* Ensure dropdown is above other content */
+}
+
+.dropdown-menu li {
+    display: block; /* Stack items vertically */
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block; /* Show dropdown when hovering over parent */
+}
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+    .nav-bar {
+        display: block; /* Stack items vertically on smaller screens */
+    }
+    .dropdown-menu {
+        position: relative; /* Adjust position for mobile */
+    }
+} 
+
 .logo img {
     width: 100px;
     height: 100px;
     position: fixed;
-       top: 1%;
+    top: 1%;
     justify-items: center;
     left: 2%;
     transition: 0.3s;
