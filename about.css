@@ -2,7 +2,6 @@
 
 * {
     padding: 0;
-    margin: 0;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
@@ -11,6 +10,9 @@
 
 }
 
+html {
+    scroll-behavior: smooth;
+} 
 
 
 body {
@@ -28,7 +30,7 @@ header {
     display: flex; /* Use flexbox for alignment */
     justify-content: space-between; /* Space between logo and navbar */
     align-items: center; /* Vertically center items */
-    padding: 10px 20px; /* Padding around the header */
+    padding: 20px 20px; /* Padding around the header */
     background-color: #d2fdff; /* Background color for the header */
 } 
 
@@ -41,15 +43,40 @@ header {
     list-style: none;
     font-weight: bold;
     position: relative;
-    padding: 10px;
+}
 
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none; /* Hide dropdown by default */
+    position: absolute; /* Position below the parent */
+    background-color: #d2fdff; /* Dropdown background color */
+    min-width: 160px; /* Minimum width of dropdown */
+    z-index: 1; /* Ensure dropdown is above other content */
+}
+
+.dropdown-menu li {
+    display: block; /* Stack items vertically */
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block; /* Show dropdown when hovering over parent */
+}
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+    .nav-bar {
+        display: block; /* Stack items vertically on smaller screens */
+    }
+    .dropdown-menu {
+        position: relative; /* Adjust position for mobile */
+    }
 }
 
 .logo img {
     width: 100px;
     height: 100px;
-    position: fixed;
-       top: 1%;
+    top: 1%;
     justify-items: center;
     left: 2%;
     transition: 0.3s;
@@ -270,3 +297,310 @@ input {
     transform: scale(0.95); /* Slightly scale down when clicked */
     background-color: #388e3c; /* Even darker green on active */
 }  
+
+.about-us {
+    padding: 25px;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 5px;
+}
+
+/* header */
+.header-about {
+    width: 100%;
+    height: 500px; /* You may want to adjust this based on your design */
+    overflow: hidden;
+    position: relative;
+}
+
+.header-content {
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+h1 {
+ font-size: 50px;
+
+}
+
+head img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area */
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-about {
+        height: 300px; /* Adjust height for smaller screens */
+    }
+
+    .header-content {
+        font-size: 1.0em; /* Adjust text size for readability */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-about {
+        height: 200px; /* Further adjust height for very small screens */
+    }
+
+    .header-content {
+        font-size: 1.2em; /* Further adjust text size */
+    }
+}
+
+/* content */
+.intro {
+    font-size: 20px;
+    margin-top: 2%;
+    margin-left: 10%;
+    max-width: 80%;
+    text-align: center;
+    background-color: #00BF63;
+}
+
+.missionsection {
+    padding: 20px;
+
+}
+
+
+.mission {
+    text-align: center;
+    padding: 20px;
+}
+
+
+.descripmission {
+    font-size: 20px;
+    margin-top: 2%;
+    margin-left: 10%;
+    max-width: 80%;
+    text-align: center;
+    background-color: #00BF63;
+}
+
+.visionsection {
+    padding: 20px;
+}
+
+
+.vision {
+    text-align: center;
+    padding: 20px;
+}
+
+.descripv {
+    font-size: 20px;
+    margin-top: 2%;
+    margin-left: 10%;
+    max-width: 80%;
+    text-align: center;
+    background-color: #00BF63;
+}
+
+
+.val {
+
+    text-align: center;
+    padding: 20px;
+
+}
+
+.whole {
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 50%;
+    padding: 10px;
+    text-align: center;
+
+}
+
+.column p {
+    padding: 10px;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+    font-size: 18px;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: #00BF63;
+}
+
+.values:hover {
+    cursor: pointer;
+    color: darkgreen;
+}
+
+@media only screen and (max-width: 768px) {
+    .column {
+        flex: 100%;
+    }
+
+    .missionleaf,
+    .vissionleaf,
+    .valuesleaf {
+        display: none;
+    }
+}
+/* Development Team */
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+   
+   }
+
+.devdes {
+    font-size: 20px;
+    margin-top: 2%;
+    margin-left: 10%;
+    max-width: 80%;
+    text-align: center;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 1000px; /* Adjust as needed */
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+img {
+    width: 100%;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+
+/* our Team */
+.ourteam {
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.flip-box {
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+    padding: 5px;
+    display: inline-block;
+    margin: 3%;
+
+}
+
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.9s;
+    transform-style: preserve-3d;
+
+}
+
+.flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+
+}
+
+.flip-box-front,
+.flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 5%;
+}
+
+
+.flip-box-back {
+    color: black;
+    transform: rotateY(180deg);
+
+}
+
+.flip-box-front img {
+    border-radius: 5%;
+    border: 2px solid;
+
+}
+
+.flip-box-back i {
+    font-size: 30px;
+}
+
+/* end content  */ 
+
+.footer {
+    padding: 5px 0;
+    background-color: #00BF63;
+}
+
+footer .container { 
+ width: 100%;
+ margin: 0 auto;
+ padding: auto;
+
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+} 
+
+.footer ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+    color: white;
+}
+
+.footer ul li {
+    display: inline-block;
+    padding: 0 50px;
+    color: white; 
+}
+
+.footer .copyright {
+    margin-top: 15px;
+    font-size: 20px;
+    text-align: center;
+} 
