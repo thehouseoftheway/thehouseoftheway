@@ -1,0 +1,406 @@
+@import url("https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "Gentium Book Plus", sans-serif;
+    color: oklch(from color l c h);
+
+}
+
+
+
+body {
+    font-family: "Gentium Book Plus" sans-serif;
+    background-color: #d2fdff;
+}
+
+
+.xContainer {
+    justify-content: center;
+    display: none;
+}
+ 
+header {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between logo and navbar */
+    align-items: center; /* Vertically center items */
+    padding: 20px 20px; /* Padding around the header */
+    background-color: #d2fdff; /* Background color for the header */
+} 
+
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    list-style: none;
+    font-weight: bold;
+    position: relative;
+    z-index: 1000; 
+    padding: 15px; 
+    max-height: 90%; 
+
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none; /* Hide dropdown by default */
+    position: absolute; /* Position below the parent */
+    background-color: #d2fdff; /* Dropdown background color */
+    min-width: 160px; /* Minimum width of dropdown */
+    z-index: 1; /* Ensure dropdown is above other content */
+}
+
+.dropdown-menu li {
+    display: block; /* Stack items vertically */
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block; /* Show dropdown when hovering over parent */
+}
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+    .nav-bar {
+        display: block; /* Stack items vertically on smaller screens */
+       
+ 
+    }
+    .dropdown-menu {
+        position: relative; /* Adjust position for mobile */
+    }
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 1%;
+    justify-items: center;
+    left: 2%;
+    transition: 0.3s;
+    animation: fadeIn 2s; 
+
+}
+
+
+.menu {
+    display: flex;
+    gap: 10px;
+}
+
+.menu li {
+    padding-left: 30px;
+}
+
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+    padding: 10px 24px;
+}
+
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #00BF63;
+    transition: 0.15s ease-in-out;
+}
+
+.menu li a:hover:after {
+    width: 100%;
+}
+
+.open-menu,
+.close-menu {
+    position: absolute;
+    color: #00BF63;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+
+}
+
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+
+#check {
+    display: none;
+}
+
+@media(max-width: 610px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: #d2fdff;
+        transition: all 0.2s ease-in-out;
+        gap: 0px;
+    }
+
+    .menu li {
+        margin-top: 40px;
+    }
+
+    .menu li a {
+        padding: 10px;
+    }
+
+    .open-menu,
+    .close-menu {
+        display: block;
+    }
+
+    #check:checked~.menu {
+        right: 0;
+    }
+}
+
+@media(max-width: 1100px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: #d2fdff;
+        transition: all 0.2s ease-in-out;
+        gap: 0px;
+    }
+
+    .menu li {
+        margin-top: 40px;
+    }
+
+    .menu li a {
+        padding: 10px;
+    }
+
+    .open-menu,
+    .close-menu {
+        display: block;
+    }
+
+    #check:checked~.menu {
+        right: 0;
+    }
+}
+
+.socialIcons {
+    display: none;
+}
+
+.socialIcons a {
+    text-decoration: none;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 50%;
+    background-color: #d2fdff;
+    color: #00BF63;
+}
+
+
+@media(max-width: 610px) {
+    .socialIcons {
+        display: flex;
+        color: black;
+    }
+}
+
+@media(max-width: 1100px) {
+    .socialIcons {
+        display: flex;
+        color: black;
+    }
+} 
+
+.back-to-top {
+    position: fixed; /* Keep the button fixed on the screen */
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    background-color: #00BF63; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 50%; /* Circular button */
+    width: 50px; /* Width */
+    height: 50px; /* Height */
+    font-size: 24px; /* Font size for the icon */
+    cursor: pointer; /* Change cursor on hover */
+    display: none; /* Initially hidden */
+    z-index: 1000; /* Ensure it is on top */
+    text-align: center; /* Center the text/icon */
+    line-height: 50px; /* Center the icon vertically */
+}
+
+.back-to-top:hover {
+    background-color: #005F40; /* Darker on hover */
+} 
+
+.hidden {
+    display: none; /* Class to hide elements */
+}
+
+#loginForm {
+    max-width: 300px; /* Limit the width of the form */
+    margin: 20px auto; /* Center the form */
+    padding: 15px; /* Add padding */
+    border: 1px solid #ccc; /* Border around the form */
+    left: 100%; /* Distance from the left side */
+    top: 100%; /* Distance from the top */ 
+    border-radius: 2px; /* Rounded corners */
+    background-color: #d2fdff; /* White background for the form */
+    position: absolute; 
+    z-index: 1000; /* Ensure it appears above other content */
+
+}
+
+#loginForm.show {
+    opacity: 1; /* Fully visible */
+    top: 70px; /* Adjust this value to set how high the form floats */
+    left: 75%;
+} 
+
+label {
+    display: block; /* Make labels block elements */
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+input {
+    width: 100%; /* Full width input */
+    padding: 10px; /* Padding inside input */
+    margin-bottom: 15px; /* Space between inputs */
+    border: 1px solid #ccc; /* Border around input */
+    border-radius: 3px; /* Rounded corners */
+}
+
+.login-button {
+    background-color: #00BF63; /* Green background */
+    color: white; /* White text */
+    padding: 10px 15px; /* Padding */
+    align-items: center;
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+.login-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.login-button:active {
+    transform: scale(0.95); /* Slightly scale down when clicked */
+    background-color: #388e3c; /* Even darker green on active */
+}  
+
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+  }
+  
+  .gallery {
+    margin-bottom: 16px; /* Space between gallery items */
+  }
+  
+  
+  .gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .desc {
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Modal Styles */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+  }
+  
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 100%;
+    max-width: 95%; /* Max width for modal image */
+    font-weight: bold;
+  }
+  
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+/* Responsive Adjustments */
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%; /* Two columns for medium screens */
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%; /* Single column for small screens */
+    }
+}
+
