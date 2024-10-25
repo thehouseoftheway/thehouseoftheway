@@ -1,0 +1,477 @@
+@import url("https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "Gentium Book Plus", sans-serif;
+    color: oklch(from color l c h);
+
+}
+
+
+
+body {
+    font-family: "Gentium Book Plus" sans-serif;
+    background-color: #d2fdff;
+}
+
+
+.xContainer {
+    justify-content: center;
+    display: none;
+}
+ 
+header {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between logo and navbar */
+    align-items: center; /* Vertically center items */
+    padding: 20px 20px; /* Padding around the header */
+    background-color: #d2fdff; /* Background color for the header */
+} 
+
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    list-style: none;
+    font-weight: bold;
+    position: relative;
+    z-index: 1000; 
+    padding: 15px; 
+    max-height: 90%; 
+
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none; /* Hide dropdown by default */
+    position: absolute; /* Position below the parent */
+    background-color: #d2fdff; /* Dropdown background color */
+    min-width: 160px; /* Minimum width of dropdown */
+    z-index: 1; /* Ensure dropdown is above other content */
+}
+
+.dropdown-menu li {
+    display: block; /* Stack items vertically */
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block; /* Show dropdown when hovering over parent */
+}
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+    .nav-bar {
+        display: block; /* Stack items vertically on smaller screens */
+       
+ 
+    }
+    .dropdown-menu {
+        position: relative; /* Adjust position for mobile */
+    }
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 1%;
+    justify-items: center;
+    left: 2%;
+    transition: 0.3s;
+    animation: fadeIn 2s; 
+
+}
+
+
+.menu {
+    display: flex;
+    gap: 10px;
+}
+
+.menu li {
+    padding-left: 30px;
+}
+
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+    padding: 10px 24px;
+}
+
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #00BF63;
+    transition: 0.15s ease-in-out;
+}
+
+.menu li a:hover:after {
+    width: 100%;
+}
+
+.open-menu,
+.close-menu {
+    position: absolute;
+    color: #00BF63;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+
+}
+
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+
+#check {
+    display: none;
+}
+
+@media(max-width: 610px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: #d2fdff;
+        transition: all 0.2s ease-in-out;
+        gap: 0px;
+    }
+
+    .menu li {
+        margin-top: 40px;
+    }
+
+    .menu li a {
+        padding: 10px;
+    }
+
+    .open-menu,
+    .close-menu {
+        display: block;
+    }
+
+    #check:checked~.menu {
+        right: 0;
+    }
+}
+
+@media(max-width: 1100px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: #d2fdff;
+        transition: all 0.2s ease-in-out;
+        gap: 0px;
+    }
+
+    .menu li {
+        margin-top: 40px;
+    }
+
+    .menu li a {
+        padding: 10px;
+    }
+
+    .open-menu,
+    .close-menu {
+        display: block;
+    }
+
+    #check:checked~.menu {
+        right: 0;
+    }
+}
+
+.socialIcons {
+    display: none;
+}
+
+.socialIcons a {
+    text-decoration: none;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 50%;
+    background-color: #d2fdff;
+    color: #00BF63;
+}
+
+
+@media(max-width: 610px) {
+    .socialIcons {
+        display: flex;
+        color: black;
+    }
+}
+
+@media(max-width: 1100px) {
+    .socialIcons {
+        display: flex;
+        color: black;
+    }
+}
+
+
+.texts {
+    padding: 50px 0;
+    font-family: "Gentium Book Plus", sans-serif;
+    text-align: center;
+    color: black;
+    margin-top: -7%;
+}
+
+.texts h1 {
+    font-size: 55px;
+    font-family: "Gentium Book Plus", sans-serif;
+    font-weight: bold;
+    margin-top: 5%;
+    color: black;
+    -webkit-text-stroke: 1px black;
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+
+.texts p {
+    font-size: 23px;
+    margin-top: 2%;
+    font-weight: bold;
+    font-family: "Gentium Book Plus", sans-serif;
+}
+
+/* button INFO */
+.btn-info {
+    padding: 5px;
+    margin-top: 3%;
+    border-radius: 10px;
+    background-color: #00BF63;
+    font-family: "Tahoma", serif;
+    border: 2px solid rgb(8, 48, 21);
+    font-size: 20px;
+}
+
+.btn-info:hover {
+    background-color: #00BF63;
+    font-family: "Tahoma";
+    transform: scale(1.1);
+    border: 2px solid rgb(8, 48, 21);
+}
+
+.btn-info a {
+    color: black;
+    text-decoration: none;
+}
+
+.btn-info a:hover {
+    color: white;
+}
+
+
+
+.footer {
+    padding: 5px 0;
+    background-color: #00BF63;
+}
+
+footer .container { 
+ width: 100%;
+ margin: 0 auto;
+ padding: auto;
+
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+} 
+
+.footer ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+    color: white;
+}
+
+.footer ul li {
+    display: inline-block;
+    padding: 0 50px;
+    color: white; 
+}
+
+.footer .copyright {
+    margin-top: 15px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.back-to-top {
+    position: fixed; /* Keep the button fixed on the screen */
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    background-color: #00BF63; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 50%; /* Circular button */
+    width: 50px; /* Width */
+    height: 50px; /* Height */
+    font-size: 24px; /* Font size for the icon */
+    cursor: pointer; /* Change cursor on hover */
+    display: none; /* Initially hidden */
+    z-index: 1000; /* Ensure it is on top */
+    text-align: center; /* Center the text/icon */
+    line-height: 50px; /* Center the icon vertically */
+}
+
+.back-to-top:hover {
+    background-color: #005F40; /* Darker on hover */
+} 
+
+
+* {box-sizing: border-box;}
+body {font-family: "Gentium Book Plus", sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #00BF63;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 2px;
+  width: 5px;
+  margin: 0 2px;
+  background-color: #00BF63;
+  border-radius: 50%;
+  visibility: hidden;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+} 
+ 
+
+.hidden {
+    display: none; /* Class to hide elements */
+}
+
+#loginForm {
+    max-width: 300px; /* Limit the width of the form */
+    margin: 20px auto; /* Center the form */
+    padding: 15px; /* Add padding */
+    border: 1px solid #ccc; /* Border around the form */
+    left: 100%; /* Distance from the left side */
+    top: 100%; /* Distance from the top */ 
+    border-radius: 2px; /* Rounded corners */
+    background-color: #d2fdff; /* White background for the form */
+    position: absolute; 
+    z-index: 1000; /* Ensure it appears above other content */
+
+}
+
+#loginForm.show {
+    opacity: 1; /* Fully visible */
+    top: 70px; /* Adjust this value to set how high the form floats */
+    left: 75%;
+} 
+
+label {
+    display: block; /* Make labels block elements */
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+input {
+    width: 100%; /* Full width input */
+    padding: 10px; /* Padding inside input */
+    margin-bottom: 15px; /* Space between inputs */
+    border: 1px solid #ccc; /* Border around input */
+    border-radius: 3px; /* Rounded corners */
+}
+
+.login-button {
+    background-color: #00BF63; /* Green background */
+    color: black; /* White text */
+    padding: 10px 15px; /* Padding */
+    align-items: center;
+    border: 2px solid rgb(8, 48, 21);
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+.login-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.login-button:active {
+    transform: scale(0.95); /* Slightly scale down when clicked */
+    background-color: #388e3c; /* Even darker green on active */
+    border: 2px solid rgb(8, 48, 21);
+} 
+
+
