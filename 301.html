@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The House of the Way Inn & Convention Center</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="room.css">
+    <link rel="icon" type="image/x-icon" href="Photos/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <li class="logo"><a href="index.html"><img src="Photos/logo.png" alt="logo"></a></li>
+    
+        <nav>
+            <ul class="nav-bar">
+                <input type="checkbox" id="check">
+                <span class="menu">
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="guestroom.html">ROOMS</a></li>
+                    <li><a href="location.html">LOCATION</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="reservation.html">RESERVATIONS</a></li>
+                    <li><a href="#" onclick="toggleLogin()">Log In</a></li>
+                    <label for="check" class="close-menu"><i class="fa-solid fa-xmark"></i></label>
+    
+                    <div class="xContainer"></div>
+                    <div class="socialIcons">
+                        <a href="https://www.facebook.com/thehouse.oftheway" target="_blank" class="icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.airbnb.com/rooms/26698940?guests=1&adults=1&s=67&unique_share_id=d272dae7-8d65-4d46-8204-81a941829c5c" target="_blank" class="icon"><i class="fab fa-airbnb"></i></a>
+                        <a href="mailto:thehouseofthewayinnconventionc@gmail.com" class="icon"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </span>
+    
+                <label for="check" class="open-menu"><i class="fa-solid fa-bars"></i></label>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="loginForm" class="hidden">
+            <h1>Login</h1>
+            <form action="your-login-endpoint" method="POST"> <!-- Change the action URL as needed -->
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+  
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+  
+                <button type="submit" class="login-button">Log In</button>
+            </form>
+        </div>
+    </main>   
+
+<!------------ This part is Header ------------>
+<section class="header-about" id="header-about">
+    <div class="slideshow-container">
+        <div class="slide">
+            <img class="image" src="Photos/301.jpg" alt="Room 1">
+        </div>
+        <div class="slide">
+            <img class="image" src="Photos/301 (3).jpg" alt="Room 2">
+        </div>
+        <div class="slide">
+            <img class="image" src="Photos/301 (4).jpg" alt="Room 3">
+        </div>
+        <div class="slide">
+            <img class="image" src="Photos/301 (2).jpg" alt="Room 4">
+        </div>
+        <div class="slide">
+            <img class="image" src="Photos/301bed.jpg" alt="Room 5">
+        </div>
+        <div class="slide">
+            <img class="image" src="Photos/301view.jpg" alt="Room 6">
+        </div>
+
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+
+        <div class="header-content">
+            <h1>ROOM 301</h1>
+            <a href="https://www.airbnb.com/rooms/25183297?guests=1&adults=1&s=67&unique_share_id=31f5c15f-ebd7-464c-b6e4-2b5e69177601" class="book-now">Book Now</a>
+        </div>
+    </div>
+</section> 
+
+
+<script>
+let slideIndex = 0;
+showSlide(slideIndex);
+
+function changeSlide(n) {
+    showSlide(slideIndex += n);
+}
+
+function showSlide(n) {
+    const slides = document.getElementsByClassName("slide");
+    if (n >= slides.length) { slideIndex = 0; }
+    if (n < 0) { slideIndex = slides.length - 1; }
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slides[slideIndex].style.display = "block";  
+} 
+
+</script>
+
+    
+
+
+</body>
+
+</html>
