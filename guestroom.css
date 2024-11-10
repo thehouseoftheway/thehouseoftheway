@@ -303,43 +303,42 @@ input {
     border: 2px solid rgb(8, 48, 21);
 }
 
+/* Footer Styling */
 .footer {
-    padding: 5px 0;
+    padding: 10px 0;
     background-color: #00BF63;
 }
 
-footer .container { 
- width: 100%;
- margin: 0 auto;
- padding: auto;
-
-}
-
-footer a:hover {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-} 
-
-.footer ul {
-    margin-top: 0;
-    padding: 0;
-    list-style: none;
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 0;
+.footer .container { 
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
     text-align: center;
-    color: white;
 }
 
-.footer ul li {
+.footer .footer-link {
     display: inline-block;
-    padding: 0 50px;
-    color: white; 
+    margin: 10px;
 }
 
+.footer a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: block;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+/* Copyright styling */
 .footer .copyright {
-    margin-top: 15px;
-    font-size: 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    color: white;
     text-align: center;
 } 
 
