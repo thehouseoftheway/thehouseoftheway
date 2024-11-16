@@ -196,7 +196,7 @@ header {
     font-family: 'Gentium Book Plus', sans-serif;
 }
 
-/* About Us Section */
+
 .about-us {
     display: flex;
     justify-content: center;
@@ -205,17 +205,17 @@ header {
     background-color: #032f30;
 }
 
-/* Flexbox container for the layout */
+
 .about-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1200px; /* Maximum width */
+    max-width: 1200px; 
     gap: 20px;
 }
 
-/* Left container for description */
+
 .description-container {
     flex: 1;
     text-align: left;
@@ -223,7 +223,6 @@ header {
     color: white;
 }
 
-/* Title for About Us */
 .about-title {
     text-align: center;
     font-size: 40px;
@@ -233,28 +232,28 @@ header {
     color: white;
 }
 
-/* Description styling */
+
 .intro {
     font-size: 18px;
     line-height: 1.6;
     color: white;
 }
 
-/* Right container for image */
+
 .image-container {
     flex: 1;
     text-align: right;
 }
 
-/* Image styling */
+
 .image-container img {
     width: 100%;
-    max-width: 500px;  /* Adjust based on your image size */
+    max-width: 500px;  
     height: auto;
     border-radius: 8px;
 }
 
-/* Responsive Styles */
+
 @media (max-width: 768px) {
     .about-content {
         flex-direction: column;
@@ -267,7 +266,7 @@ header {
     }
 
     .image-container {
-        margin-top: 20px; /* Adds some space between text and image on smaller screens */
+        margin-top: 20px; 
     }
 
     .about-title {
@@ -302,11 +301,11 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1200px; /* Maximum width for the section */
+    max-width: 1200px; 
     gap: 20px;
 }
 
-/* Left Side: Mission Image */
+
 .mission-image {
     flex: 1;
     text-align: center;
@@ -314,19 +313,19 @@ header {
 
 .mission-image img {
     width: 100%;
-    max-width: 500px; /* Adjust image size */
+    max-width: 500px; 
     height: auto;
     border-radius: 8px;
 }
 
-/* Right Side: Mission & Vision Text */
+
 .mission-text {
     flex: 1;
     color: #032f30;
     text-align: left;
 }
 
-/* Title Styling */
+
 .mission-title {
     font-size: 40px;
     font-weight: bold;
@@ -336,7 +335,7 @@ header {
     color: #032f30;
 }
 
-/* Mission and Vision Section */
+
 .mission-section, .vision-section {
     margin-bottom: 30px;
 }
