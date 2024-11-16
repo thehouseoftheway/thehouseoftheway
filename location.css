@@ -199,7 +199,7 @@ h1 {
 /* Google Map Styling */
 #map {
     width: 100%;
-    height: 400px;
+    height: 600px;
     margin-bottom: 40px;
 }
 
@@ -209,48 +209,74 @@ h1 {
     border: 0;
 }
 
-/* Description Section Styling */
-.locdes {
-    padding: 20px;
-    background-color: #0a7075;
-    margin: 20px auto;
-    max-width: 1100px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    color: white;
+h2, h3 {
+    text-decoration: underline;
+    font-size: 1.5em;
+    color: black;
 }
 
-.aboutthisplace {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-    color: white;
-    text-align: center;
-    text-decoration: underline;
+section.locdes {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 .intro, .reminder {
     font-size: 1.1em;
     line-height: 1.6;
-    margin-bottom: 15px;
+    margin: 15px 0;
+    color: #555;
+}
+
+/* Flexbox Layout */
+.info-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.info-grid > div {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Styling the individual sections */
+.info-grid .about {
+    padding: 20px;
+    background-color: #0a7075;
+    border-radius: 8px;
+    
+}
+
+.info-grid .about h3, .info-grid .access h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.info-grid .access {
+    padding: 20px;
+    background-color: #0a7075;
+    border-radius: 8px;
+}
+
+/* Spacing and other styles */
+.info-grid .about p, .info-grid .access p {
+    margin-bottom: 10px;
+    color: white;
+}
+
+/* Additional Styling for mobile view */
+@media (max-width: 768px) {
+    .info-grid {
+        flex-direction: column;
+    }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2em;
-    }
-
-    .locdes {
-        padding: 15px;
-    }
-
-    .aboutthisplace {
-        font-size: 1.5em;
-    }
-
-    .intro, .reminder {
-        font-size: 1em;
-    }
 
     /* Ensure map adjusts on small screens */
     #map {
@@ -259,17 +285,6 @@ h1 {
 }
 
 @media (max-width: 480px) {
-    h1 {
-        font-size: 1.8em;
-    }
-
-    .aboutthisplace {
-        font-size: 1.3em;
-    }
-
-    .intro, .reminder {
-        font-size: 0.95em;
-    }
 
     /* Reduce the map height even further on small screens */
     #map {
