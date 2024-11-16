@@ -50,23 +50,27 @@
 </header>
  
 <div class="main-container">
-    <!-- Title Section (Left Side) -->
-    <div class="title-container">
-        <h1 class="title">The House of the Way Inn & Convention Center</h1>
-        <p class="description">A place of comfort, luxury, and exceptional service. Your ideal destination for both leisure and business.</p>
+    <!-- Left Section (Title and Image) -->
+    <div class="left-container">
+        <!-- Title Section -->
+        <div class="title-container">
+            <h1 class="title">The House of the Way Inn & Convention Center</h1>
+        </div>
+
+        <!-- Image Section (Left Side) -->
+        <div class="image-container">
+            <img src="Photos/frontview.jpg" alt="Front View" class="image">
+        </div>
     </div>
 
-    <!-- Right Section (Slideshow and Video) -->
+    <!-- Right Section (Image and Buttons) -->
     <div class="right-container">
-        <!-- Slideshow Section -->
-        <div class="slideshow-container">
-            <div class="slideshow-images">
-                <img src="Photos/frontview.jpg" alt="Slideshow Image 1">
-                <img src="Photos/gardenview.jpeg" alt="Slideshow Image 2">
-                <img src="Photos/4.jpg" alt="Slideshow Image 3">
-            </div>
+        <!-- Image Section (Right Side) -->
+        <div class="image-container">
+            <img src="Photos/gardenview.jpeg" alt="Garden View" class="image">
         </div>
- 
+
+        <!-- Buttons Section (Below Right Image) -->
         <div class="buttons-container">
             <button class="join-btn" onclick="window.open('https://www.airbnb.com/', '_blank')">
                 Book Now! <i class="fas fa-arrow-right"></i>
@@ -76,26 +80,25 @@
                 About Us <i class="fas fa-arrow-right"></i>
             </button>
         </div>
+    </div>
+</div>
 
 
-<script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll(".slideshow-images img");
-    const totalSlides = slides.length;
-
-    setInterval(() => {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        document.querySelector(".slideshow-images").style.transform = `translateX(-${currentSlide * 100}%)`;
-    }, 3000);
-</script> 
-
-
-
-
-  
-  
-
-
+<section class="footer-section">
+    <div class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy-policy" class="footer-link">Privacy Policy</a>
+                <a href="#terms-of-service" class="footer-link">Terms of Service</a>
+                <a href="#contact" class="footer-link">Contact Us</a>
+            </div>
+        </div>
+        <p class="copyright">
+            ©2024 The House of the Way Inn & Convention Center. All Rights Reserved.
+        </p>
+    </div>
+</section> 
+ 
 
 
     <script src="script.js"></script>
