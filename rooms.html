@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>The House of the Way Inn & Convention Center</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="rooms.css">
+    <link rel="icon" type="image/x-icon" href="Photos/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <li class="logo"><a href="index.html"><img src="Photos/logo.png" alt="logo"></a></li>
+
+    <nav>
+        <ul class="nav-bar">
+            <input type="checkbox" id="check">
+            <span class="menu">
+                <li><a href="index.html">HOME</a></li> <!-- Added HOME link -->
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="rooms.html">ROOMS</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="location.html">CONTACT US</a></li>
+                <li><a href="https://www.airbnb.com/login" target="_blank" class="login-link">Log In</a></li>
+                <label for="check" class="close-menu"><i class="fa-solid fa-xmark"></i></label>
+                
+                <div class="xContainer"></div>
+                <div class="socialIcons">
+                    <a href="https://www.facebook.com/thehouse.oftheway" target="_blank" class="icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.airbnb.com/rooms/26698940?guests=1&adults=1&s=67&unique_share_id=d272dae7-8d65-4d46-8204-81a941829c5c" target="_blank" class="icon"><i class="fab fa-airbnb"></i></a>
+                    <a href="mailto:thehouseofthewayinnconventionc@gmail.com" class="icon"><i class="fas fa-envelope"></i></a>
+                </div>
+            </span>
+            <label for="check" class="open-menu"><i class="fa-solid fa-bars"></i></label>
+        </ul>
+    </nav>
+
+</header> 
+
+<section class="rooms-intro">
+    <div class="intro-container">
+      <h2 class="title1">Discover Our Stunning Rooms</h2>
+      <p class="description1">Each of our rooms is meticulously designed to offer comfort, elegance, and modern amenities, ensuring an unforgettable stay whether for business or leisure.</p>
+  </section>
+  
+
+  <!-- First Section: Image Slider and Room Details -->
+  <div class="container">
+    <div class="content">
+        <h1 class="title">Room 301</h1>
+        <p class="description">
+            Experience the comfort and tranquility of Room 301, nestled within a beautiful, serene environment. Enjoy the private space while having access to shared areas, making it the perfect getaway.
+        </p>
+
+        <div class="offers">
+            <div class="offer"><p>• 1 Double Bed</p></div>
+            <div class="offer"><p>• Accessible closet</p></div>
+            <div class="offer"><p>• Own CR</p></div>
+            <div class="offer"><p>• Air Conditioned</p></div>
+    
+        </div>
+        <button class="book-now-btn" onclick="window.open('https://www.airbnb.com/rooms/25183297?s=51', 'https://www.airbnb.com/rooms/25183297?s=51_blank')">Book Now</button>
+    </div>
+
+    <div class="slider">
+        <div class="slider-images">
+            <img src="Photos/301bed.jpg" alt="Room 301 Image 1">
+            <img src="Photos/301 (2).jpg" alt="Room 301 Image 2">
+            <img src="Photos/301 (3).jpg" alt="Room 301 Image 3">
+            <img src="Photos/301 (4).jpg" alt="Room 301 Image 4">
+        </div>
+        <div class="slider-buttons">
+            <button class="slider-button" onclick="prevSlide()">&#10094;</button>
+            <button class="slider-button" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+</div>
+
+<!-- Second Section: Left Section with Slider and Room Details -->
+<div class="container new">
+    <div class="slider-second">
+        <div class="slider-images-second">
+            <img src="Photos/302.jpg" alt="Room 302 Image 1">
+            <img src="Photos/302 (2).jpg" alt="Room 302 Image 2">
+            <img src="Photos/302 (3).jpg" alt="Room 302 Image 3">
+            <img src="Photos/302 (4).jpg" alt="Room 302 Image 4">
+        </div>
+        <div class="slider-buttons-second">
+            <button class="slider-button" onclick="prevSlideSecond()">&#10094;</button>
+            <button class="slider-button" onclick="nextSlideSecond()">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="content-second">
+        <h1 class="title-second">Room 302</h1>
+        <p class="description-second">
+            Room 302 provides a more spacious experience with upgraded amenities designed for both comfort and style. Enjoy the perfect retreat.
+        </p>
+
+        <div class="offers-second">
+            <div class="offer-second"><p>• 2 single/twin beds for 2 guests</p></div>
+            <div class="offer-second"><p>• Luxurious amenities</p></div>
+            <div class="offer-second"><p>• Own CR</p></div>
+            <div class="offer-second"><p>• Air Conditioned</p></div>
+        </div>
+        <button class="book-now-btn" onclick="window.open('https://abnb.me/G6kG3DuxzV', 'https://abnb.me/G6kG3DuxzV_blank')">Book Now</button>
+    </div>
+</div>
+
+<!-- Third Section: Image Slider and Room Details -->
+<div class="container">
+    <div class="content">
+        <h1 class="title">Room 303</h1>
+        <p class="description">
+            Room 303 is perfect for those looking for a more intimate space while enjoying upgraded furnishings and great natural lighting.
+        </p>
+
+        <div class="offers">
+            <div class="offer"><p>•  2 full/double beds for 2-4 guests.</p></div>
+            <div class="offer"><p>• Accessible closet</p></div>
+            <div class="offer"><p>• Own CR</p></div>
+            <div class="offer"><p>• Air Conditioned</p></div>
+    
+        </div>
+        <button class="book-now-btn" onclick="window.open('https://abnb.me/amXzWn08FV', 'https://abnb.me/amXzWn08FV_blank')">Book Now</button>
+    </div>
+
+
+    <div class="slider-third">
+        <div class="slider-images-third">
+            <img src="Photos/303bed.jpg" alt="Room 303 Image 1">
+            <img src="Photos/303 (2).jpg" alt="Room 303 Image 2">
+            <img src="Photos/303 (3).jpg" alt="Room 303 Image 3">
+            <img src="Photos/303 (4).jpg" alt="Room 303 Image 4">
+        </div>
+        <div class="slider-buttons-third">
+            <button class="slider-button" onclick="prevSlideThird()">&#10094;</button>
+            <button class="slider-button" onclick="nextSlideThird()">&#10095;</button>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Fourth Section: Left Section with Slider and Room Details -->
+<div class="container fourth">
+    <div class="slider-fourth">
+        <div class="slider-images-fourth">
+            <img src="Photos/304.jpg" alt="Room 304 Image 1">
+            <img src="Photos/304cr.jpg" alt="Room 304 Image 2">
+            <img src="Photos/304 (2).jpg" alt="Room 304 Image 3">
+            <img src="Photos/304 (3).jpg" alt="Room 304 Image 4">
+        </div>
+        <div class="slider-buttons-fourth">
+            <button class="slider-button" onclick="prevSlideFourth()">&#10094;</button>
+            <button class="slider-button" onclick="nextSlideFourth()">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="content-second">
+        <h1 class="title-second">Room 304</h1>
+        <p class="description-second">
+            Room 304 is designed with elegance and comfort in mind, featuring modern furnishings and beautiful surroundings for an unforgettable stay.
+        </p>
+
+        <div class="offers-second">
+            <div class="offer-second"><p>• 2 double beds</p></div>
+            <div class="offer-second"><p>• Luxurious amenities</p></div>
+            <div class="offer-second"><p>• Own CR</p></div>
+            <div class="offer-second"><p>• Air Conditioned</p></div>
+        </div>
+        <button class="book-now-btn" onclick="window.open('https://www.airbnb.com/rooms/25251247?s=51', 'https://www.airbnb.com/rooms/25251247?s=51_blank')">Book Now</button>
+    </div>
+</div> 
+
+<section class="footer-section">
+    <div class="footer">
+        <!-- Footer Center (Contact Icons) -->
+        <div class="footer-center">
+            <h3>Contact Us</h3>
+            <div class="contact-icons">
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>09942654632</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-tty"></i>
+                    <span>+1 234 567 890</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Fuentes Subd., Roxas City</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Left (Links and Credit) -->
+        <div class="footer-left">
+            <!-- Links Section -->
+            <div class="footer-links">
+                <a href="about.html" class="footer-link">Privacy Policy</a>
+                <a href="#terms-of-service" class="footer-link">Terms of Service</a>
+                <a href="#contact" class="footer-link">Contact Us</a>
+            </div>
+
+            <!-- Credit & Copyright -->
+            <div class="footer-credit">
+                <p>Designed by Keith Philippe Francisco | Developed by Sandara Emille Ardena</p>
+            </div>
+            <p class="copyright">
+                ©2024 The House of the Way Inn & Convention Center. All Rights Reserved.
+            </p>
+        </div>
+
+        <!-- Footer Right (Social Icons) -->
+        <div class="footer-right">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/thehouse.oftheway" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook"></i>
+                    <span>TheHouse oftheWay</span>
+                </a>
+                <a href="mailto:thehouseofthewayinnconventionc@gmail.com" class="social-icon">
+                    <i class="fas fa-envelope"></i>
+                    <span>thehouseofthewayinnconventionc@gmail.com</span>
+                </a>
+                <a href="https://www.airbnb.com/rooms/26698940?guests=1&adults=1&s=67&unique_share_id=d272dae7-8d65-4d46-8204-81a941829c5c" target="_blank" class="social-icon">
+                    <i class="fab fa-airbnb"></i>
+                    <span>airbnb.com</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+    // JavaScript for Slider Functionality
+    let currentSlide = 0;
+    function nextSlide() {
+        const slides = document.querySelectorAll(".slider-images img");
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateSlide();
+    }
+    function prevSlide() {
+        const slides = document.querySelectorAll(".slider-images img");
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        updateSlide();
+    }
+    function updateSlide() {
+        const slides = document.querySelector(".slider-images");
+        slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    // Repeat for Second, Third, and Fourth Sections
+    let currentSlideSecond = 0;
+    function nextSlideSecond() {
+        const slides = document.querySelectorAll(".slider-images-second img");
+        currentSlideSecond = (currentSlideSecond + 1) % slides.length;
+        updateSlideSecond();
+    }
+    function prevSlideSecond() {
+        const slides = document.querySelectorAll(".slider-images-second img");
+        currentSlideSecond = (currentSlideSecond - 1 + slides.length) % slides.length;
+        updateSlideSecond();
+    }
+    function updateSlideSecond() {
+        const slides = document.querySelector(".slider-images-second");
+        slides.style.transform = `translateX(-${currentSlideSecond * 100}%)`;
+    }
+    
+    // Third Section Slider
+    let currentSlideThird = 0;
+    function nextSlideThird() {
+        const slides = document.querySelectorAll(".slider-images-third img");
+        currentSlideThird = (currentSlideThird + 1) % slides.length;
+        updateSlideThird();
+    }
+    function prevSlideThird() {
+        const slides = document.querySelectorAll(".slider-images-third img");
+        currentSlideThird = (currentSlideThird - 1 + slides.length) % slides.length;
+        updateSlideThird();
+    }
+    function updateSlideThird() {
+        const slides = document.querySelector(".slider-images-third");
+        slides.style.transform = `translateX(-${currentSlideThird * 100}%)`;
+    }
+
+    // Fourth Section Slider
+    let currentSlideFourth = 0;
+    function nextSlideFourth() {
+        const slides = document.querySelectorAll(".slider-images-fourth img");
+        currentSlideFourth = (currentSlideFourth + 1) % slides.length;
+        updateSlideFourth();
+    }
+    function prevSlideFourth() {
+        const slides = document.querySelectorAll(".slider-images-fourth img");
+        currentSlideFourth = (currentSlideFourth - 1 + slides.length) % slides.length;
+        updateSlideFourth();
+    }
+    function updateSlideFourth() {
+        const slides = document.querySelector(".slider-images-fourth");
+        slides.style.transform = `translateX(-${currentSlideFourth * 100}%)`;
+    }
+</script>
+
+
+<script src="script.js"></script>
+  
+</body>
+
+</html> 
