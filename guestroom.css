@@ -238,15 +238,22 @@ header {
 
 /* Main container for the section */
 .section__container {
-    max-width: var(--max-width);
-    margin: auto;
-    padding: 2rem 1rem;
-  }
-  
-/* Subheader style */
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr; /* Default for smaller screens */
+  gap: 2rem;
+}
+
+/* Layout for left content and promo container */
+.content-left {
+  display: flex;
+  flex-direction: column;
+}
+
 .section__subheader {
   margin-bottom: 0.5rem;
-  position: relative;
   font-weight: 500;
   letter-spacing: 2px;
   color: var(--text-dark);
@@ -262,35 +269,97 @@ header {
   background-color: var(--primary-color);
 }
 
-/* Main header style */
 .section__header {
-  max-width: 1000px;
-  margin-bottom: 1rem;
   font-size: 2.5rem;
   font-weight: 600;
-  line-height: 3rem;
   color: var(--text-dark);
 }
 
-/* Link Button Styles */
-a.btn {
-  padding: 0.75rem 1.5rem;
-  outline: none;
-  border: none;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--white);
-  background-color: #00BF63;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none; /* Remove underline */
-  display: inline-block; /* Make the link behave like a button */
-  transition: 0.3s;
+.promo-container {
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  text-align: center;
+  animation: slideUp 2s ease-out;
 }
 
-a.btn:hover {
-  background-color: var(--primary-color-dark);
+.airbnb-button {
+  background-color: #FF5A5F;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s, transform 0.3s;
+  margin-top: 20px;
 }
+
+.airbnb-button:hover {
+  background-color: #FF3B4F;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .promo-container {
+    padding: 20px;
+  }
+}
+
+/* Show More Button Styling */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #00BF63; /* Main color */
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.3s;
+  position: relative;
+  margin-top: 10px; /* Space from the text above */
+  text-transform: uppercase;
+}
+
+/* Hover effect */
+.btn:hover {
+  background-color: #00A04A; /* Darker shade of green */
+  transform: translateY(-4px); /* Lift effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Focus effect */
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 191, 99, 0.6); /* Add a subtle glow effect */
+}
+
+/* Animation when the button is shown */
+.btn {
+  opacity: 0;
+  animation: fadeInUp 0.8s forwards;
+  animation-delay: 1s;
+}
+
+/* Button fade-in-up animation */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+ 
 
 /* Grid layout for rooms */
 .room__grid {
@@ -298,6 +367,20 @@ a.btn:hover {
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr; /* Single column layout */
+}
+
+/* Tablet and up (iPads, smaller desktops) */
+@media (min-width: 768px) {
+  .room__grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+  }
+}
+
+/* Desktop screens */
+@media (min-width: 1024px) {
+  .room__grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on large screens */
+  }
 }
 
 /* Styling for each room card */
@@ -345,21 +428,6 @@ a.btn:hover {
   color: var(--text-dark);
 }
 
-/* Media Queries for responsiveness */
-
-/* Tablet and up (iPads, smaller desktops) */
-@media (min-width: 768px) {
-  .room__grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
-  }
-}
-
-/* Desktop screens */
-@media (min-width: 1024px) {
-  .room__grid {
-    grid-template-columns: repeat(4, 1fr); /* 4 columns on large screens */
-  }
-}
 
 .footer {
   margin-top: 2rem;
@@ -418,6 +486,13 @@ a.btn:hover {
   font-size: 0.8rem;
   color: var(--text-light);
 }
+
+@media (max-width: 768px) {
+  .footer__bar {
+    font-size: 0.9rem;
+  }
+}
+ 
 
 @media (width < 900px) {
   .about__container {
